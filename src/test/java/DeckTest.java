@@ -7,12 +7,11 @@ import static org.junit.Assert.assertEquals;
 
 public class DeckTest {
 
-    Card card;
     Deck deck;
 
     @Before
     public void before(){
-        card = new Card(SuitType.SPADES, RankType.ACE);
+        deck = new Deck();
     }
 
     @Test
@@ -22,9 +21,7 @@ public class DeckTest {
 
     @Test
     public void deckIsFull(){
-        deck.addCardsToDeck();
-        assertEqual(52, deck.countCards());
-
+        assertEquals(52, deck.countCards());
     }
 }
 
